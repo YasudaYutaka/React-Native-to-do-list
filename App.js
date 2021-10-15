@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
+import Header from './components/header';
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Header />
       <View style={styles.content}>
         {/* todo form */}
         <View style={styles.list}>
