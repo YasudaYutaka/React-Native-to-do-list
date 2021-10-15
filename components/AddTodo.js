@@ -9,14 +9,20 @@ export default function AddTodo({submitHandler}) {
         setEnteredText(value);
     }
 
+    const pressHandler = () => {
+        submitHandler(enteredText);
+        setEnteredText('');
+    }
+
     return(
         <View>
             <TextInput
                 style={styles.input} 
                 placeholder='new todo...'
                 onChangeText={changeHandler}
+                value={enteredText}
             />
-            <Button onPress={() => submitHandler(enteredText)} title='Add Todo' color='coral' />
+            <Button onPress={pressHandler} title='Add Todo' color='coral' />
         </View>
     );
 }
